@@ -2,6 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: IBM Plex Mono, sans-serif;
   margin: auto;
   min-width: 375px;
   max-width: 1024px;
@@ -13,7 +14,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  font-family: IBM Plex Mono, sans-serif;
+  
 }
 
 .page:has(.header__theme-menu-button_type_dark:checked) {
@@ -32,21 +33,21 @@
   display: grid;
   align-items: start;
   gap: 20px;
-  max-height: 648px;
   padding: 10px;
   position: relative;
+  height: 100vh;
 }
 
 .rec {
-  position: absolute;
-  right: 0;
-  color: #ff0070;
-  text-align: center;
   font-family: IBM Plex Mono, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 25px;
+  position: absolute;
+  right: 0;
+  color: #ff0070;
+  text-align: center;
 }
 
 .header__theme-menu {
@@ -54,13 +55,13 @@
 }
 
 .title {
-  color: var(--main-title-color);
-  text-shadow: 4px 4px 0 #ff0070;
   font-family: IBM Plex Mono, sans-serif;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%; /* 95.7px */
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 #ff0070;
   justify-self: center;
   grid-row-start: 2;
   grid-row-end: span 3;
@@ -92,13 +93,13 @@
 }
 
 .title-decor {
-  background-color: var(--accent-color);
-  color: var(--accent-text-color);
   font-family: IBM Plex Mono, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
 }
 
 .main {
@@ -124,6 +125,10 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.footer {
+  height: 100vh;
 }
 
 @media (width >= 768px) {
