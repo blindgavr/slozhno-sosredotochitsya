@@ -2,6 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: grid;
   font-family: IBM Plex Mono, sans-serif;
   margin: auto;
   min-width: 375px;
@@ -14,7 +15,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 100vh 1fr 100vh;
 }
 
 .page:has(.header__theme-menu-button_type_dark:checked) {
@@ -30,12 +32,10 @@
 }
 
 .header {
-  display: grid;
-  align-items: start;
-  gap: 20px;
-  padding: 10px;
-  position: relative;
   height: 100vh;
+  display: grid;
+  gap: 20px;
+  position: relative;
 }
 
 .rec {
@@ -63,8 +63,11 @@
   color: var(--main-title-color);
   text-shadow: 4px 4px 0 #ff0070;
   justify-self: center;
-  grid-row-start: 2;
-  grid-row-end: span 3;
+}
+
+.title__description {
+  justify-self: end;
+  width: 50%;
 }
 
 .header__theme-menu-item {
@@ -128,7 +131,13 @@
 }
 
 .footer {
-  height: 100vh;
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 95.7px */
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 #ff0070;
 }
 
 @media (width >= 768px) {
