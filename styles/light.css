@@ -13,6 +13,9 @@
   --button-outline: 1px solid #353430;
   --accent-text-color: #353430;
   --section-title-color: #353430;
+  --rec-visible: hidden;
+  --text-shadow: #FF8DCB;
+  --button-hover: 1px solid rgba(50, 49, 45, 0.40);
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
@@ -20,7 +23,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .page {
+    .page {
     --main-text-color: #353430;
     --main-background-image: url(../images/cover-image-light.png); 
     --main-title-color: #FFC2E6;
@@ -29,6 +32,9 @@
     --button-outline: 1px solid #353430;
     --accent-text-color: #353430;
     --section-title-color: #353430;
+    --rec-visible: hidden;
+    --text-shadow: #FF8DCB;
+    --button-hover: 1px solid rgba(50, 49, 45, 0.40);
     }
 }
 
