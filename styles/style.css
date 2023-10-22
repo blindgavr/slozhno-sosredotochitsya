@@ -15,7 +15,7 @@
   background-position: center;
   background-size: cover;
   padding: 10px;
-  gap: 40px;
+  gap: 50px;
 }
 
 .page:has(.header__theme-menu-button_type_dark:checked) {
