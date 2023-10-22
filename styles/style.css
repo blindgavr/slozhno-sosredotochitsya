@@ -184,7 +184,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 23.4px; /* 130% */
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .title-paragraph {
@@ -197,6 +197,10 @@
 
 .card-title:nth-child(4) {
   margin-bottom: 0;
+}
+
+.last-card-title {
+  margin-bottom: 20px;
 }
 
 .card_text {
@@ -373,6 +377,10 @@
   }
 
   .last__text-section .card-title {
+    margin-bottom: 0;
+  }
+
+  .last-card-title {
     margin-bottom: 0;
   }
 
