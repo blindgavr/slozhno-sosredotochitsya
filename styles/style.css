@@ -18,18 +18,6 @@
   gap: 50px;
 }
 
-.page:has(.header__theme-menu-button_type_dark:checked) {
-  --main-text-color: #f1b2ce;
-  --main-background-color: #000028;
-  --main-title-color: #db00ff;
-}
-
-.page:has(.header__theme-menu-button_type_light:checked) {
-  --main-text-color: #353430;
-  --main-background-color: #fff1f7;
-  --main-title-color: #ffc2e6;
-}
-
 .header {
   min-height: calc(100vh - 20px);
   display: grid;
@@ -82,7 +70,7 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background-color: #ff0070;
+  background-color: var(--accent-color);
   filter: drop-shadow(0px 0px 4px #ff0070);
 }
 
@@ -131,7 +119,7 @@
   pointer-events: none;
 }
 
-.header__theme-menu-item:hover {
+.header__theme-menu-button:hover {
   outline: var(--button-hover);
 }
 
@@ -227,12 +215,6 @@
 }
 
 .footer {
-  font-family: "IBM Plex Mono", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 82.5%; /* 95.7px */
-  color: var(--main-title-color);
-  text-shadow: 2px 2px 0 var(--text-shadow);
   height: calc(100vh - 20px);
   display: grid;
   place-items: center;
@@ -262,6 +244,12 @@
 }
 
 .footer__title {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 82.5%; /* 95.7px */
+  color: var(--main-title-color);
+  text-shadow: 2px 2px 0 var(--text-shadow);
   font-size: clamp(7.25rem, 6.3477rem + 3.8498vw, 9.8125rem);
 }
 
@@ -273,6 +261,10 @@
 
 .linked__text:hover {
   border-bottom: 1px solid var(--main-text-color);
+}
+
+.linked__text:focus {
+  outline: none;
 }
 
 .linked__text:focus-visible {
@@ -287,63 +279,16 @@
 
   .header {
     min-height: calc(100vh - 40px);
-    display: grid;
     grid-template-rows: 0 1fr 99px 1fr;
-    position: relative;
-    max-width: 100%;
   }
 
   .title-paragraph {
     width: 50%;
-    align-self: center;
     justify-self: end;
   }
 
-  .header::before,
-  .header::after {
-    content: "";
-    height: 25px;
-    width: 25px;
-    position: absolute;
-  }
-
-  .header::before {
-    top: 0;
-    right: 0;
-    border-top: 1px solid var(--button-color);
-    border-right: 1px solid var(--button-color);
-  }
-
-  .header::after {
-    bottom: 0;
-    left: 0;
-    border-bottom: 1px solid var(--button-color);
-    border-left: 1px solid var(--button-color);
-  }
-
   .rec {
-    font-family: "IBM Plex Mono", sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-    position: relative;
-    right: 28px;
     color: #ff0070;
-    text-align: end;
-    text-transform: uppercase;
-  }
-
-  .rec::after {
-    content: "";
-    position: absolute;
-    margin-top: 9px;
-    margin-left: 10px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background-color: #ff0070;
-    filter: drop-shadow(0px 0px 4px #ff0070);
   }
 
   .title {
@@ -427,22 +372,15 @@
   }
 
   .header__theme-menu-list {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    place-content: center;
   }
 
   .header {
-    min-height: calc(100vh - 40px);
-    display: grid;
     grid-template-rows: 0 1fr 130px 1fr;
-    position: relative;
-    max-width: 100%;
   }
 
   .title {
-    text-shadow: 4px 4px 0 #ff0070;
+    text-shadow: 4px 4px 0 #ff0070; /* нужно для соответствия макету, в >1024px цвет как и в дарк теме. В других случаях - переменная */
   }
 
   .section__info-2 {
@@ -463,7 +401,7 @@
     margin-top: 5px;
   }
 
-  .footer {
-    text-shadow: 2px 2px 0 #ff0070;
+  .footer__title {
+    text-shadow: 2px 2px 0 #ff0070; /* нужно для соответствия макету, в >1024px цвет как и в дарк теме. В других случаях - переменная */
   }
 }
